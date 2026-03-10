@@ -9,4 +9,5 @@ plugins {
   alias(libs.plugins.kotlin.binary.compatibility)
   alias(libs.plugins.spotless)
   alias(libs.plugins.dokka)
+  alias(libs.plugins.nexus.plugin) apply false
 }

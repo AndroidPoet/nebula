@@ -9,11 +9,13 @@ plugins {
 }
 
 mavenPublishing {
+  publishToMavenCentral(com.vanniktech.maven.publish.SonatypeHost.CENTRAL_PORTAL)
+  signAllPublications()
   coordinates("io.github.androidpoet", "nebula", "0.1.0")
 
   pom {
     name.set("Nebula")
-    description.set("Server-driven native UI for Kotlin Multiplatform — JSON to Compose, no WebView")
+    description.set("Server-driven native UI for Kotlin Multiplatform")
     url.set("https://github.com/AndroidPoet/nebula")
 
     licenses {
