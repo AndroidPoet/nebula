@@ -2,20 +2,17 @@
 plugins {
   alias(libs.plugins.android.library)
   alias(libs.plugins.kotlin.multiplatform)
-  alias(libs.plugins.jetbrains.compose)
-  alias(libs.plugins.compose.compiler)
-  alias(libs.plugins.kotlin.serialization)
   alias(libs.plugins.nexus.plugin)
 }
 
 mavenPublishing {
   publishToMavenCentral(com.vanniktech.maven.publish.SonatypeHost.CENTRAL_PORTAL)
   signAllPublications()
-  coordinates("io.github.androidpoet", "nebula", "0.1.0")
+  coordinates("io.github.androidpoet", "nebula-protocol", "0.1.0")
 
   pom {
-    name.set("Nebula")
-    description.set("Server-driven native UI for Kotlin Multiplatform")
+    name.set("Nebula Protocol")
+    description.set("Binary wire protocol for server-driven native UI — core model, operations, and expression engine")
     url.set("https://github.com/AndroidPoet/nebula")
 
     licenses {
@@ -85,13 +82,7 @@ kotlin {
   sourceSets {
     val commonMain by getting {
       dependencies {
-        implementation(compose.ui)
-        implementation(compose.foundation)
-        implementation(compose.material3)
-        implementation(compose.runtime)
-        implementation(compose.animation)
-        implementation(libs.kotlinx.serialization.json)
-        implementation(libs.kotlinx.coroutines.core)
+        // Pure Kotlin — no Compose dependencies
       }
     }
     val commonTest by getting {
@@ -105,13 +96,9 @@ kotlin {
   explicitApi()
 }
 
-composeCompiler {
-  enableStrongSkippingMode = true
-}
-
 android {
   compileSdk = 34
-  namespace = "io.github.androidpoet.nebula"
+  namespace = "io.github.androidpoet.nebula.protocol"
 
   defaultConfig {
     minSdk = 21

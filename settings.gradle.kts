@@ -17,4 +17,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Nebula"
 include(":nebula-core")
+include(":nebula-protocol")
+include(":nebula-protocol-creation")
+include(":nebula-protocol-player")
 include(":sample")
