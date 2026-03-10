@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="art/screenshot.png" alt="Nebula" width="420" />
+  <img src="art/logo.jpeg" alt="Nebula" width="200" />
+</p>
+
+<p align="center">
+  <img src="art/screenshot.png" alt="Nebula Demo" width="420" />
 </p>
 
 <p align="center">
