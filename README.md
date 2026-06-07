@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="art/logo.svg" width="800" alt="Nebula">
+</p>
+
+<p align="center">
   <img src="art/logo.jpeg" alt="Nebula" width="200" />
 </p>
 

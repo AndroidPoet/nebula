@@ -314,12 +314,12 @@ private fun buildModifier(
       is ModifierBackgroundOperation -> {
         val shape = if (op.cornerRadius > 0f)
           RoundedCornerShape(op.cornerRadius.dp) else RoundedCornerShape(0.dp)
-        mod.background(Color(op.color.toULong()), shape)
+        mod.background(Color(op.color.toInt()), shape)
       }
       is ModifierBorderOperation -> {
         val shape = if (op.cornerRadius > 0f)
           RoundedCornerShape(op.cornerRadius.dp) else RoundedCornerShape(0.dp)
-        mod.border(op.width.dp, Color(op.color.toULong()), shape)
+        mod.border(op.width.dp, Color(op.color.toInt()), shape)
       }
       is ModifierClipRectOperation -> mod.clip(RoundedCornerShape(0.dp))
       is ModifierRoundedClipOperation -> mod.clip(
@@ -383,7 +383,7 @@ private fun resolveTextStyle(
     return TextStyle(
       fontSize = styleOp.fontSize.sp,
       fontWeight = FontWeight(styleOp.fontWeight),
-      color = Color(styleOp.color.toULong()),
+      color = Color(styleOp.color.toInt()),
       letterSpacing = if (styleOp.letterSpacing > 0f) styleOp.letterSpacing.sp else TextStyle.Default.letterSpacing,
       lineHeight = if (styleOp.lineHeight > 0f) styleOp.lineHeight.sp else TextStyle.Default.lineHeight,
       textAlign = when (styleOp.textAlign) {
