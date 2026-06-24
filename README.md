@@ -454,6 +454,14 @@ Zero heavy dependencies. No networking library. No image loader. Just Compose + 
 ./gradlew :sample:run
 ```
 
+## Contributing
+
+Contributions are welcome! If you've found a bug, have an idea for an improvement, or want to contribute new features, please open an issue or submit a pull request.
+
+## Find this repository useful? :heart:
+Support it by joining __[stargazers](https://github.com/androidpoet/nebula/stargazers)__ for this repository. :star: <br>
+Also, __[follow me](https://github.com/androidpoet)__ on GitHub for my next creations! 🤩
+
 ## License
 
 ```
